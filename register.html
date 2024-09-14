@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA Notes Wallah - Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="bgVideo">
+            <source src="NIT.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="register-container">
+        <h1>Register for BCA Notes Wallah</h1>
+        <form id="registerForm" action="welcome.html" method="POST">
+            <div class="input-group">
+                <label for="college-id">College ID:</label>
+                <input type="text" id="college-id" name="college-id" required>
+            </div>
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="register-btn">Register</button>
+            <p>Already have an account? <a href="index.html">Login</a></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents the form from submitting immediately
+            alert('Thanks for joining!');
+            // Optionally, you can then submit the form using JavaScript if needed
+            // this.submit(); 
+        });
+    </script>
+</body>
+</html>
